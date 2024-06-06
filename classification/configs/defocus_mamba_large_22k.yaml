@@ -1,0 +1,35 @@
+MODEL:
+  TYPE: mamba
+  NAME: defocus_mamba_large
+  depth: 48
+  NUM_CLASSES: 21841
+  drop_path_rate: 0.4
+  min_drop_path_rate: 0.1
+  use_scheduled_drop_path: False
+  head_type: IN22k_cls
+  use_aux_loss: True
+  use_rope: True
+  MAMBA:
+    intermediate_size: 2048
+    conv_kernel: 4
+    group_norm_size: 64
+TRAIN:
+  EPOCHS: 90
+  WARMUP_EPOCHS: 5
+  BASE_LR: 1.25e-4
+  CLIP_GRAD: 10.0
+  USE_CHECKPOINT: True
+DATA:
+  DATASET: imagenet22K
+  DATA_PATH: path/to/imagenet22k
+  DATA_PATH_VAL: path/to/imagenet1k
+  BATCH_SIZE: 64
+  IMG_SIZE: 192
+AUG:
+  AUTO_AUGMENT: None
+  COLOR_JITTER: 0.0
+  MIXUP_PROB: 0.5
+  MIXUP_SWITCH_PROB: 0.0
+  REPROB: 0.0
+  use_repeated_aug: False
+bfloat16: True

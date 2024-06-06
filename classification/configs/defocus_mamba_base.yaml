@@ -1,0 +1,24 @@
+MODEL:
+  TYPE: mamba
+  NAME: defocus_mamba_base
+  depth: 24
+  drop_path_rate: 0.75
+  min_drop_path_rate: 0.1
+  use_scheduled_drop_path: True
+  head_type: IN1k_cls
+  use_aux_loss: True
+  use_rope: True
+  MAMBA:
+    intermediate_size: 1536
+    conv_kernel: 4
+    group_norm_size: 64
+TRAIN:
+  BASE_LR: 5e-4
+  CLIP_GRAD: 10.0
+  AUTO_RESUME: False
+DATA:
+  DATA_PATH: path/to/imagenet1k
+  BATCH_SIZE: 32
+AUG:
+  use_repeated_aug: True
+bfloat16: True
