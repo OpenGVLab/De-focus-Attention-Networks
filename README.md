@@ -1,7 +1,7 @@
 # De-focus Attention Networks
 **TL;DR: 1D causal visual modeling can perform competitively with 2D non-causal visual modeling.**
 
-This is the official implementation of the paper [Learning 1D Causal Visual Representation with De-focus Attention Networks]().
+This is the official implementation of the paper [Learning 1D Causal Visual Representation with De-focus Attention Networks](https://arxiv.org/abs/2406.04342).
 
 ![De-focus Attention Networks-overview](./assets/overview.png)
 
@@ -105,6 +105,7 @@ If you find De-focus Attention Networks useful in your research, please consider
 @article{tao2024learning,
   title={Learning 1D Causal Visual Representation with De-focus Attention Networks},
   author={Tao, Chenxin and Zhu, Xizhou and Su, Shiqian and Lu, Lewei and Tian, Changyao and Luo, Xuan and Huang, Gao and Li, Hongsheng and Qiao, Yu and Zhou, Jie and Dai, Jifeng},
+  journal={arXiv preprint arXiv:2406.04342},
   year={2024}
 }
 ```
